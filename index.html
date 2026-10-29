@@ -63,7 +63,7 @@ function actionRotate(deg){const members=safeGroupMembers(selectedIds);if(!membe
 function cleanGroups(){const ids=new Set(allObjects().map(e=>e.id));state.groups=state.groups.map(g=>({...g,memberIds:g.memberIds.filter(id=>ids.has(id))})).filter(g=>g.memberIds.length>=2)}
 
 try{const s=JSON.parse(localStorage.getItem('kavxo-mobile-v2')||localStorage.getItem('kavxo-mobile-v1'));if(s&&typeof s==='object')state=sanitize(s)}catch(e){}
-function sanitize(raw){if(!raw||typeof raw!=='object'||Array.isArray(raw))return structuredClone(DEFAULT);let o={...DEFAULT};for(const k of ['width','height','depth','yaw','pitch','zoom']){let v=Number(raw[k]);if(Number.isFinite(v))o[k]=v}o.width=clamp(o.width,80,240);o.depth=clamp(o.depth,55,160);o.height=clamp(o.height,130,300);o.pitch=clamp(o.pitch,-.35,1.40);o.zoom=clamp(o.zoom,.55,2.4);for(const k of ['material','color','glass'])if(typeof raw[k]==='string'&&raw[k].length<25)o[k]=raw[k];o.chimney=raw.chimney!==false;
+function sanitize(raw){if(!raw||typeof raw!=='object'||Array.isArray(raw))return {...DEFAULT,body:{...BODY_DEFAULT},objects:structuredClone(INITIAL_EXTRA),layers:structuredClone(INITIAL_LAYERS),groups:[]};let o={...DEFAULT};for(const k of ['width','height','depth','yaw','pitch','zoom']){let v=Number(raw[k]);if(Number.isFinite(v))o[k]=v}o.width=clamp(o.width,80,240);o.depth=clamp(o.depth,55,160);o.height=clamp(o.height,130,300);o.pitch=clamp(o.pitch,-.35,1.40);o.zoom=clamp(o.zoom,.55,2.4);for(const k of ['material','color','glass'])if(typeof raw[k]==='string'&&raw[k].length<25)o[k]=raw[k];o.chimney=raw.chimney!==false;
 const safeNum=(n,f,lo,hi)=>Number.isFinite(Number(n))?clamp(Number(n),lo,hi):f;
 const safeLayer=x=>INITIAL_LAYERS.some(l=>l.id===x)?x:'construction';
 const safeObject=(x,i)=>({id:String(x.id||'obj-'+i).replace(/[^a-z0-9_-]/gi,'').slice(0,40)||'obj-'+i,kind:['bench','wall'].includes(x.kind)?x.kind:'bench',name:String(x.name||'Element '+i).slice(0,45),w:safeNum(x.w,70,10,300),h:safeNum(x.h,50,10,350),d:safeNum(x.d,50,10,300),x:safeNum(x.x,0,-600,600),y:safeNum(x.y,0,-100,600),z:safeNum(x.z,0,-600,600),angle:safeNum(x.angle,0,-360,360),layerId:safeLayer(x.layerId),locked:x.locked===true,visible:x.visible!==false});
@@ -71,7 +71,7 @@ o.body={...BODY_DEFAULT,...Object.fromEntries(['x','y','z','angle'].map(k=>[k,sa
 o.objects=Array.isArray(raw.objects)?raw.objects.slice(0,20).filter(x=>x&&typeof x==='object').map(safeObject):structuredClone(INITIAL_EXTRA);
 let known=new Set(['body']);o.objects=o.objects.filter(e=>{if(known.has(e.id))return false;known.add(e.id);return true});
 o.layers=INITIAL_LAYERS.map(l=>({id:l.id,name:l.name,visible:(Array.isArray(raw.layers)?raw.layers:[]).find(x=>x?.id===l.id)?.visible!==false,locked:(Array.isArray(raw.layers)?raw.layers:[]).find(x=>x?.id===l.id)?.locked===true}));
-o.groups=Array.isArray(raw.groups)?raw.groups.slice(0,20).map((g,i)=>({id:'g'+i,name:'Grupa '+(i+1),memberIds:[...new Set((g.memberIds||[]).filter(id=>known.has(id)))]})).filter(g=>g.memberIds.length>=2):[];
+o.groups=Array.isArray(raw.groups)?raw.groups.slice(0,20).map((g,i)=>({id:'g'+i,name:'Grupa '+(i+1),memberIds:[...new Set((Array.isArray(g?.memberIds)?g.memberIds:[]).filter(id=>known.has(id)))]})).filter(g=>g.memberIds.length>=2):[];
 return o}
 function clamp(v,a,b){return Math.min(b,Math.max(a,v))}
 function save(){try{localStorage.setItem('kavxo-mobile-v2',JSON.stringify(state))}catch(e){}}
