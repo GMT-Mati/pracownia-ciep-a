@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"><meta name="theme-color" content="#151b23"><title>KAVXO Web 4.7 — CeramicWall SET</title>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"><meta name="theme-color" content="#151b23"><title>KAVXO Web 4.9 — CeramicWall SET</title>
 <style>
 :root{--bg:#111821;--panel:#1a232d;--panel2:#222d39;--line:#35404b;--txt:#f7f1e9;--muted:#aab5bd;--copper:#d39a6c;--cream:#f1e9dc}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--txt);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:14px;-webkit-tap-highlight-color:transparent}body{overflow-x:hidden}button,select,input{font:inherit}button{touch-action:manipulation;cursor:pointer}header{display:flex;align-items:center;justify-content:space-between;padding:13px 15px 10px;gap:10px;background:#151b23;border-bottom:1px solid #28313c}header .identity{display:flex;align-items:center;gap:8px}header svg{width:36px;height:36px;flex:none}header h1{margin:0;letter-spacing:3px;font-size:19px;line-height:1}header h1 span{color:var(--copper)}header p{margin:5px 0 0;color:#a8a7a1;font-size:9px;letter-spacing:.7px}header small{font-size:10px;letter-spacing:.4px;color:#d8a77b;background:#322b28;border:1px solid #634936;border-radius:30px;padding:7px 9px;white-space:nowrap}
@@ -258,6 +258,31 @@ const MANUFACTURER_TILES={
  'dacer-miii-280':{producer:'DACER · Manufaktura III',flat:'format 220×280 mm',corner:'NAROŻNIK — MODEL NIEPRZYPISANY',w:22,h:28,cornerHeight:0,legX:0,legZ:0,url:'https://www.dacer.pl/manufaktura-iii.php',verifiedCorner:false,details:'Producent potwierdza format 22×28 cm, szeroki wybór szkliw i kształtek. Profil dekoracyjny wyłącznie poglądowy.'},
  'dacer-miii-440':{producer:'DACER · Manufaktura III',flat:'format 440×220 mm',corner:'BRAK ZWERYFIKOWANEGO DOPASOWANIA',w:44,h:22,cornerHeight:0,legX:0,legZ:0,url:'https://www.dacer.pl/manufaktura-iii.php',verifiedCorner:false}
 };
+
+// KAVXO 4.8 — zweryfikowane formaty CeramicWall 2026; profil reliefu poglądowy.
+Object.assign(MANUFACTURER_TILES,{
+"ceramicwall-boompy":{"producer":"Kafel-Kar · CeramicWall","flat":"Bo66.01 · Boompy (220×660×22 mm)","corner":"Bo66.10 · 660×55×55 mm","vent":"Bo66.01w","w":22.0,"h":66.0,"depthMm":22,"cornerHeight":66.0,"legX":5.5,"legZ":5.5,"profile":"honeycomb","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-piano":{"producer":"Kafel-Kar · CeramicWall","flat":"Pi44.01 · Piano (110×440×35 mm)","corner":"Pi44.10 · 440×100×100 mm","vent":"Pi44.01w","w":11.0,"h":44.0,"depthMm":35,"cornerHeight":44.0,"legX":10.0,"legZ":10.0,"profile":"fluted","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-echo":{"producer":"Kafel-Kar · CeramicWall","flat":"Ec30.01 · Echo (300×300×54 mm)","corner":"niepotwierdzony","vent":"Ec30.01w","w":30.0,"h":30.0,"depthMm":54,"cornerHeight":0,"legX":0,"legZ":0,"profile":"circular","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":false,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-surf":{"producer":"Kafel-Kar · CeramicWall","flat":"Su44.01 · Surf (220×440×32 mm)","corner":"Su44.10 · 440×46×46 mm","vent":"Su44.01w","w":22.0,"h":44.0,"depthMm":32,"cornerHeight":44.0,"legX":4.6,"legZ":4.6,"profile":"wave","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-effect":{"producer":"Kafel-Kar · CeramicWall","flat":"Ef44.01 · Effect (220×440×22 mm)","corner":"Ef44.10 · 440×55×55 mm","vent":"Ef44.01w","w":22.0,"h":44.0,"depthMm":22,"cornerHeight":44.0,"legX":5.5,"legZ":5.5,"profile":"relief","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-metro":{"producer":"Kafel-Kar · CeramicWall","flat":"Me44.01 · Metro (220×440×28 mm)","corner":"Me44.10 · 440×51×51 mm","vent":"Me44.01w","w":22.0,"h":44.0,"depthMm":28,"cornerHeight":44.0,"legX":5.1,"legZ":5.1,"profile":"linear","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-orient":{"producer":"Kafel-Kar · CeramicWall","flat":"Ot44.01 · Orient (220×440×27 mm)","corner":"Ot44.10 · 440×64×64 mm","vent":"Ot44.01w","w":22.0,"h":44.0,"depthMm":27,"cornerHeight":44.0,"legX":6.4,"legZ":6.4,"profile":"ornamental","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-rebel":{"producer":"Kafel-Kar · CeramicWall","flat":"Re44.01 · Rebel (220×440×40 mm)","corner":"Re44.10 · 440×42×42 mm","vent":"Re44.01w","w":22.0,"h":44.0,"depthMm":40,"cornerHeight":44.0,"legX":4.2,"legZ":4.2,"profile":"relief","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-tin":{"producer":"Kafel-Kar · CeramicWall","flat":"Ti44.01 · Tin (220×440×37 mm)","corner":"Ti44.10 · 440×55×55 mm","vent":"Ti44.01w","w":22.0,"h":44.0,"depthMm":37,"cornerHeight":44.0,"legX":5.5,"legZ":5.5,"profile":"metal","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-zen":{"producer":"Kafel-Kar · CeramicWall","flat":"Ze44.01 · Zen (220×440×44 mm)","corner":"Ze44.10 · 440×55×55 mm","vent":"Ze44.01w","w":22.0,"h":44.0,"depthMm":44,"cornerHeight":44.0,"legX":5.5,"legZ":5.5,"profile":"soft","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-jazz":{"producer":"Kafel-Kar · CeramicWall","flat":"Ja44.01 · Jazz (220×440×34 mm)","corner":"Ja44.10 · 440×55×55 mm","vent":"Ja44.01w","w":22.0,"h":44.0,"depthMm":34,"cornerHeight":44.0,"legX":5.5,"legZ":5.5,"profile":"linear","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-city":{"producer":"Kafel-Kar · CeramicWall","flat":"Ci44.01 · City (220×440×20 mm)","corner":"Ci44.10 · 440×55×55 mm","vent":"Ci44.01w","w":22.0,"h":44.0,"depthMm":20,"cornerHeight":44.0,"legX":5.5,"legZ":5.5,"profile":"flat","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-cross":{"producer":"Kafel-Kar · CeramicWall","flat":"Cr44.01 · Cross (220×440×18 mm)","corner":"Cr44.10 · 440×55×55 mm","vent":"Cr44.01w","w":22.0,"h":44.0,"depthMm":18,"cornerHeight":44.0,"legX":5.5,"legZ":5.5,"profile":"cross","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-classy-chic":{"producer":"Kafel-Kar · CeramicWall","flat":"Cc44.01 · Classy Chic (220×440×20 mm)","corner":"Cc44.10 · 440×55×55 mm","vent":"Cc44.01w","w":22.0,"h":44.0,"depthMm":20,"cornerHeight":44.0,"legX":5.5,"legZ":5.5,"profile":"soft","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-loft-44":{"producer":"Kafel-Kar · CeramicWall","flat":"Lo44.01 · Loft 44 (220×440×25 mm)","corner":"Lo44.10 · 440×110×110 mm","vent":"Lo44.01w","w":22.0,"h":44.0,"depthMm":25,"cornerHeight":44.0,"legX":11.0,"legZ":11.0,"profile":"flat","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-marrakesh-40":{"producer":"Kafel-Kar · CeramicWall","flat":"Ma40.01 · Marrakesh 40 (400×400×22 mm)","corner":"niepotwierdzony","vent":"brak potwierdzonego wariantu","w":40.0,"h":40.0,"depthMm":22,"cornerHeight":0,"legX":0,"legZ":0,"profile":"ornamental","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":false,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-marrakesh-22":{"producer":"Kafel-Kar · CeramicWall","flat":"Ma22.01 · Marrakesh 22 (220×220×18 mm)","corner":"niepotwierdzony","vent":"Ma22.01w","w":22.0,"h":22.0,"depthMm":18,"cornerHeight":0,"legX":0,"legZ":0,"profile":"ornamental","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":false,"details":"Dane formatu katalog 2026; relief w 3D uproszczony. Dobór szkliwa wymaga potwierdzenia dostępności."},
+"ceramicwall-loft-44-110":{"producer":"Kafel-Kar · CeramicWall","flat":"Lo44.02 · Loft 44 / wąski (110×440×25 mm)","corner":"nieprzypisany","w":11.0,"h":44.0,"depthMm":25,"cornerHeight":0,"legX":0,"legZ":0,"profile":"flat","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":false,"details":"Format potwierdzony w katalogu 2026; dopasowanie narożnika wymaga sprawdzenia."},
+"ceramicwall-loft-44-440":{"producer":"Kafel-Kar · CeramicWall","flat":"Lo44.03 · Loft 44 / szeroki (440×440×25 mm)","corner":"nieprzypisany","w":44.0,"h":44.0,"depthMm":25,"cornerHeight":0,"legX":0,"legZ":0,"profile":"flat","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":false,"details":"Format potwierdzony w katalogu 2026; dopasowanie narożnika wymaga sprawdzenia."},
+"ceramicwall-loft-66":{"producer":"Kafel-Kar · CeramicWall","flat":"Lo66.01 · Loft 66 (440×660×25 mm)","corner":"Lo66.10","w":44.0,"h":66.0,"depthMm":25,"cornerHeight":66.0,"legX":11.0,"legZ":11.0,"profile":"flat","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":true,"details":"Format potwierdzony w katalogu 2026; dopasowanie narożnika wymaga sprawdzenia."},
+"ceramicwall-loft-22":{"producer":"Kafel-Kar · CeramicWall","flat":"Lo22.01 · Loft 22 (220×220×25 mm)","corner":"nieprzypisany","w":22.0,"h":22.0,"depthMm":25,"cornerHeight":0,"legX":0,"legZ":0,"profile":"flat","url":"https://kafel-kar.pl/public/uploads/files/kafel-kar-2026-pl-bez-cen433mb.pdf","verifiedCorner":false,"details":"Format potwierdzony w katalogu 2026; dopasowanie narożnika wymaga sprawdzenia."}
+});
 const DEFAULT={body46:{w:710,d:524,h:1236,feet:80,flue:180,air:125,gap:50,visible:false},width:120,depth:75,height:210,material:'tile',color:'ivory',customColor:'#bca78d',glass:'front',chimney:true,yaw:-0.58,pitch:.27,zoom:1,catalogId:'demo',surfaceGloss:'satin',opening:null,firebox:{maker:'manual',model:'manual',sideMm:420,filter:'all'},reuseCuts:true,kerfMm:2,tilePhotoData:null};
 const DEFAULT_CLADDING={tileW:22,tileH:22,joint:.3,corners:true,cornerLeg:11,cornerSideLeg:11,reserve:8,trimEnabled:false,capHeight:4.5,plinthHeight:8,overhang:0};
 const DEFAULT_COSTS={flat:35,corner:70,mortarPrice:8,mortarRate:5,trim:60,insert:0,other:0,laborShare:60};
@@ -481,15 +506,47 @@ function drawSetRibbing(calc,u,v,du,dv,count,shade){
    if(gloss&&i%3===1){const off=Math.max(.8,thickness);line([p1[0]+off,p1[1]],[p2[0]+off,p2[1]],'rgba(255,251,226,.22)',.7)}
  }
 }
+
+// KAVXO 4.9: relief shading is procedural geometry projected onto each tile.
+// It is a design preview, NOT a measured manufacturer mesh or scanned texture.
+function reliefTile49(calc,u,v,du,dv,profile,shade){
+ if(!profile||profile==='flat')return;
+ const pt=(x,y)=>project(...calc(u+du*x,v+dv*y));
+ const gloss=state.surfaceGloss==='gloss';
+ const light=gloss?'rgba(255,252,234,.50)':'rgba(255,252,234,.24)';
+ const dark='rgba(33,29,27,.38)';
+ ctx.save();
+ const corners=[pt(0,0),pt(1,0),pt(1,1),pt(0,1)];
+ ctx.beginPath();corners.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();ctx.clip();
+ const stroke=(points,col,w=1)=>{ctx.beginPath();points.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.strokeStyle=col;ctx.lineWidth=w;ctx.stroke()};
+ const curve=(fn,col,w=1,n=40)=>{const pts=[];for(let i=0;i<=n;i++){const t=i/n;pts.push(pt(...fn(t)))}stroke(pts,col,w)};
+ const bands=(count,amp=0)=>{for(let i=1;i<count;i++){let x=i/count;curve(t=>[x+amp*Math.sin(t*Math.PI*2+i*.55),t],dark,2.1);curve(t=>[x+.009+amp*Math.sin(t*Math.PI*2+i*.55),t],light,1.25)}};
+ switch(profile){
+ case 'set-ribbed': bands(Math.max(6,Math.round(18*du*state.width/22)));break;
+ case 'fluted': bands(8);break;
+ case 'linear': bands(5);for(let i=1;i<5;i++)curve(t=>[t,i/5+.018*Math.sin(t*6.28)],'rgba(255,255,245,.13)',.7);break;
+ case 'wave':for(let i=0;i<9;i++){curve(t=>[t,.07+i*.115+.065*Math.sin(t*8+i*.8)],dark,2);curve(t=>[t,.082+i*.115+.065*Math.sin(t*8+i*.8)],light,1.4)}break;
+ case 'circular':for(let j=0;j<3;j++){for(let k=0;k<3;k++){const cx=(k+.5)/3,cy=(j+.5)/3;for(let r=1;r<=3;r++){curve(t=>[cx+(.045+r*.031)*Math.cos(t*6.283),cy+(.045+r*.031)*Math.sin(t*6.283)],r%2?dark:light,1.4,42)}}}break;
+ case 'honeycomb':for(let j=-1;j<6;j++)for(let k=-1;k<5;k++){const cx=(k+.5+(j%2)*.5)/4,cy=(j+.5)/5,rx=.115,ry=.105;const poly=[];for(let a=0;a<=6;a++){const t=a*Math.PI/3;poly.push(pt(cx+rx*Math.cos(t),cy+ry*Math.sin(t)))}stroke(poly,dark,2);stroke(poly.map((p,i)=>[p[0]+1,p[1]-1]),light,.9)}break;
+ case 'cross':for(let i=0;i<5;i++){let x=i/4;stroke([pt(x,0),pt(1-x,1)],dark,2);stroke([pt(x+.012,0),pt(1-x+.012,1)],light,1.2);stroke([pt(0,x),pt(1,1-x)],dark,1.5)}break;
+ case 'ornamental':for(let j=0;j<3;j++)for(let k=0;k<2;k++){let cx=(k+.5)/2,cy=(j+.5)/3;for(let i=0;i<4;i++){let r=.07+i*.025;curve(t=>[cx+r*Math.cos(t*6.283)*1.5,cy+r*Math.sin(t*6.283)],i%2?dark:light,1.1)}}break;
+ case 'metal':for(let i=1;i<12;i++)curve(t=>[i/12+.008*Math.sin(t*13+i),t],i%3?light:dark,.8);break;
+ case 'soft':for(let i=1;i<5;i++){curve(t=>[i/5+.04*Math.sin(t*Math.PI),t],dark,2.4);curve(t=>[i/5+.05+.04*Math.sin(t*Math.PI),t],light,1.5)}break;
+ case 'relief':for(let i=0;i<7;i++){curve(t=>[t,.11+i*.14+.045*Math.sin(t*9+i*1.4)],i%2?dark:light,2)}break;
+ }
+ if(gloss){const a=pt(.07,.04),b=pt(.22,.96);stroke([a,b],'rgba(255,255,255,.10)',Math.max(1,Math.abs(pt(.2,0)[0]-pt(.07,0)[0])*.20))}
+ ctx.restore();
+}
 function face(pos,kind){const {width:w,depth:d,height:h}=state;let a,b,c,e;if(pos==='front'){a=[-w/2,0,d/2];b=[w/2,0,d/2];c=[w/2,h,d/2];e=[-w/2,h,d/2]}if(pos==='back'){a=[w/2,0,-d/2];b=[-w/2,0,-d/2];c=[-w/2,h,-d/2];e=[w/2,h,-d/2]}if(pos==='left'){a=[-w/2,0,-d/2];b=[-w/2,0,d/2];c=[-w/2,h,d/2];e=[-w/2,h,-d/2]}if(pos==='right'){a=[w/2,0,d/2];b=[w/2,0,-d/2];c=[w/2,h,-d/2];e=[w/2,h,d/2]}
 const calc=(u,v)=>a.map((z,i)=>z*(1-u)*(1-v)+b[i]*u*(1-v)+c[i]*u*v+e[i]*(1-u)*v);
 const base=state.color==='custom'&&/^#[0-9a-f]{6}$/i.test(state.customColor)?state.customColor:(pal[state.color]||pal.ivory),sh={front:1,left:.78,right:.86,back:.68}[pos];
 if(state.material==='plaster'){quad(a,b,c,e,color(base,sh),'#625e5a',.7);return}
 const cl=computedCladding(),cfg=state.cladding||DEFAULT_CLADDING,tiles=cl.faces[pos],width=pos==='front'||pos==='back'?state.width:state.depth;
 for(const t of tiles){const u=t.x/width,v=t.y/state.height,du=t.w/width,dv=t.h/state.height;const rand=1+.022*Math.sin(t.x*2.7+t.y*1.3),pA=project(...calc(u,v)),pD=project(...calc(u+du,v+dv)),gl=ctx.createLinearGradient(pA[0],pA[1],pD[0],pD[1]);const hi=state.surfaceGloss==='gloss'?1.17:state.surfaceGloss==='matte'?1.02:1.08,lo=state.surfaceGloss==='gloss'?.78:state.surfaceGloss==='matte'?.96:.88;gl.addColorStop(0,color(base,sh*hi*rand));gl.addColorStop(.47,color(base,sh*rand));gl.addColorStop(1,color(base,sh*lo*rand));quad(calc(u,v),calc(u+du,v),calc(u+du,v+dv),calc(u,v+dv),gl,t.cut?'#e6a662':'#3a3533bb',t.cut?1.3:.7);
- if(state.catalogId==='kafelkar-ceramicwall-set'){drawSetRibbing(calc,u,v,du,dv,Math.min(110,Math.max(5,Math.ceil(t.w/1.2))),sh)}
+ const tileProfile=MANUFACTURER_TILES[state.catalogId]?.profile;
+ if(tileProfile)reliefTile49(calc,u,v,du,dv,tileProfile,sh);
  }
-if(cl.frontLeg>0&&cl.sideLeg>0){const leg=(pos==='front'||pos==='back')?cl.frontLeg:cl.sideLeg;for(const row of (cl.cornerRows||cl.rows)){for(const xx of [0,width-leg]){const u=xx/width,du=leg/width,v=row.y/state.height,dv=row.h/state.height;quad(calc(u,v),calc(u+du,v),calc(u+du,v+dv),calc(u,v+dv),color(base,sh*.91),'#805e4b',.8);if(state.catalogId==='kafelkar-ceramicwall-set')drawSetRibbing(calc,u,v,du,dv,Math.max(3,Math.ceil(leg/1.2)),sh)}}}
+if(cl.frontLeg>0&&cl.sideLeg>0){const leg=(pos==='front'||pos==='back')?cl.frontLeg:cl.sideLeg;for(const row of (cl.cornerRows||cl.rows)){for(const xx of [0,width-leg]){const u=xx/width,du=leg/width,v=row.y/state.height,dv=row.h/state.height;quad(calc(u,v),calc(u+du,v),calc(u+du,v+dv),calc(u,v+dv),color(base,sh*.91),'#805e4b',.8);if(MANUFACTURER_TILES[state.catalogId]?.profile)reliefTile49(calc,u,v,du,dv,MANUFACTURER_TILES[state.catalogId].profile,sh)}}}
 if(cfg.trimEnabled){for(const [y,h] of [[0,cfg.plinthHeight],[Math.max(0,state.height-cfg.capHeight),cfg.capHeight]]){if(h<=0)continue;const v=y/state.height,dv=Math.min(h,state.height-y)/state.height;quad(calc(0,v),calc(1,v),calc(1,v+dv),calc(0,v+dv),color(base,sh*.68),'#a77b5a',1.5)}}
 }
 function windowFront(){let w=state.width,d=state.depth,h=state.height;const door=doorGeometry(),zz=d/2+.15;
@@ -613,14 +670,56 @@ $('chimney').addEventListener('change',e=>{state.chimney=e.target.value==='yes';
 $('tileFormat').addEventListener('change',e=>{const [w,h]=e.target.value.split('x').map(Number);state.cladding.tileW=w;state.cladding.tileH=h;state.catalogId='demo';sync();save()});
 $('sampleSetProject').onclick=()=>{state.catalogId='kafelkar-ceramicwall-set';state.material='tile';state.color='ivory';state.surfaceGloss='gloss';state.tilePhotoData=null;state.width=98;state.depth=79;state.height=255;state.cladding.tileW=22;state.cladding.tileH=44;state.cladding.corners=true;state.cladding.cornerLeg=5.5;state.cladding.cornerSideLeg=5.5;state.cladding.joint=.2;state.smart.autoFit=false;state.smart.targetWidth=98;state.smart.targetDepth=79;state.smart.targetHeight=255;state.glass='corner';state.yaw=-.58;state.pitch=.27;state.zoom=1.38;state.objects=[];selectedIds=['body'];sync();save();notify('Wczytano pokazowy kominek 98×79×255 cm w kolekcji SET. Wymiary wzorcowe; nie są gotowym projektem wykonawczym.');};
 
-const GLAZE_SIM_47=[['Kremowy','#eee2c9'],['Kość słoniowa','#e3d7c5'],['Miodowy','#bb8650'],['Karmel','#a46a43'],['Czekolada','#553c35'],['Zieleń butelkowa','#245b4d'],['Oliwka','#758164'],['Błękit','#7fa2a9'],['Kobalt','#304e78'],['Bordo','#733d48'],['Grafit','#55565b'],['Biel szkliwiona','#f5f2ea']];
-function tileMaker47(id){if(id.startsWith('dacer'))return 'DACER';if(id.startsWith('kornak'))return 'Ceramika Kornak';if(id.startsWith('kafelkar'))return 'Kafel-Kar';if(id.startsWith('riwal'))return 'Riwal';return 'all'}
-function updateTileMaker47(){const select=$('manufacturerTile'), maker=$('tileMaker47').value;for(const o of select.options){if(o.value==='demo')continue;o.hidden=maker!=='all'&&tileMaker47(o.value)!==maker;}const note=$('tileGlazeNote47');note.textContent=maker==='DACER'?'DACER deklaruje 31 szkliw. Poniżej 12 symulacji barwnych, nie oficjalny wzornik ani przypisanie kodów szkliwa.': 'Paleta jest symulacją cyfrową, nie zdjęciem ani zatwierdzonym wzornikiem producenta.';}
-function renderGlazes47(){const host=$('tileGlazes47');host.replaceChildren();for(const [name,hex] of GLAZE_SIM_47){const b=document.createElement('button');b.type='button';b.className='palette-choice';b.title=name+' — symulacja';const sw=document.createElement('i');sw.style.background='linear-gradient(120deg,'+hex+',#ffffff55 52%,'+hex+')';const t=document.createElement('span');t.textContent=name;b.append(sw,t);b.addEventListener('click',()=>{state.color='custom';state.customColor=hex;state.surfaceGloss='gloss';sync();save()});host.append(b)}}
-$('tileMaker47').addEventListener('change',()=>{updateTileMaker47();save()});
-renderGlazes47();updateTileMaker47();
 
-$('manufacturerTile').addEventListener('change',e=>{const id=e.target.value,item=MANUFACTURER_TILES[id];state.catalogId=item?id:'demo';if(item){state.material='tile';state.cladding.tileW=item.w;state.cladding.tileH=item.h;state.cladding.corners=item.verifiedCorner;state.cladding.cornerLeg=item.legX;state.cladding.cornerSideLeg=item.legZ;}sync();save();notify(item?'Wczytano format '+item.flat+'. '+(item.verifiedCorner?'Kształtka narożna katalogowa.':'Brak potwierdzonych narożników. Płytki dekoracyjne Riwal mają uproszczoną płaską bryłę, bez reliefu.'):'Włączono format demonstracyjny.')});
+// Palety producentów: nazwy z katalogów, barwy RGB aproksymowane ręcznie.
+// Producent NIE publikuje standaryzowanych wartości sRGB.
+const GLAZES_48={
+'Kafel-Kar':[
+['01 Arktyczna biel połysk','#f0eee8','gloss'],['02 Kremowy połysk','#e5d6b8','gloss'],['03 Morela połysk','#dcae89','gloss'],['05 Ecru połysk','#d8cbb6','gloss'],['06 Błękit południa','#8cbdca','gloss'],['07 Czerń fortepianowa','#191b1c','gloss'],['08 Szary połysk','#939a9a','gloss'],
+['21 Beż mat','#c8b8a1','matte'],['22 Vanilia mat','#e1d4b9','matte'],['23 Perła mat','#d5d3ca','matte'],['24 Cappucino mat','#ae9781','matte'],['26 Lawenda mat','#9f9ba9','matte'],['72 Grafit mat','#4b5053','matte'],['29 Róż wenecki mat','#c68e87','matte'],['32 Sahara mat','#c8ae82','matte'],['33 Siena mat','#b88667','matte'],['105 Olive Grove','#777e5a','satin'],['104 Frappe','#a8947b','satin'],['106 Pralines','#7e6252','satin'],['107 Volcano Black','#252423','matte'],['35 Szary mat','#8e9393','matte'],['102 Aqva','#4e888e','satin'],['11 Khaki mat','#777966','matte'],
+['04 Brąz transparentny','#70452c','gloss'],['207 Midnight Blue transparentny','#233b62','gloss'],['25 Kobalt transparentny','#214b8a','gloss'],['31 Wrzosowy transparentny','#80576d','gloss'],['74 Malinowy transparentny','#a94c65','gloss'],['34 Lniany transparentny','#c2a98a','gloss'],['30 Słonecznikowy transparentny','#d9a42c','gloss'],
+['71 Czerwień zachodu','#a83e30','gloss'],['73 Karmazynowa czerwień','#8d2837','gloss'],['75 Metaliczny brąz','#69554c','satin'],['76 Orange połysk','#d7792e','gloss'],['402 Mineral','#8b8882','satin'],['302 Oyster','#bbb9ad','satin'],['301 Sea Shell','#d5c4af','satin']
+],
+'Ceramika Kornak':[
+['Biały','#f1f0e8','gloss'],['Pieczarkowy','#c3b6a3','satin'],['Ecri','#e4d6bf','gloss'],['Kremowy błyszczący','#e7d3aa','gloss'],['Kremowy matowy','#d8c9aa','matte'],['Waniliowy','#e3ce9e','satin'],['Beżowy matowy','#bda88d','matte'],['Beżowy błyszczący','#c8ad8b','gloss'],['Toffi','#ad805c','gloss'],['Brąz miodowy','#9b663f','gloss'],['Średni brąz błyszczący','#75482d','gloss'],['Średni brąz matowy','#795b47','matte'],['Czekoladowy brąz matowy','#4d362b','matte'],['Czekoladowy brąz błyszczący','#422d24','gloss'],['Czerwony matowy','#8f302e','matte'],['Czerwony błyszczący','#b02928','gloss'],['Wiśniowy','#732b39','gloss'],['Zieleń butelkowa','#244f40','gloss'],['Ciemny szary','#535758','matte'],['Kobaltowy błyszczący','#234a8a','gloss'],['Kosmos','#363d47','satin'],['Czarny matowy','#222325','matte'],['Czarny błyszczący','#131519','gloss']
+],
+'DACER':[
+['Biel','#eeeae0','gloss'],['Kość słoniowa','#dfd4bb','gloss'],['Krem','#e5d5b6','gloss'],['Beż','#c6ac8d','satin'],['Miód','#b17b40','gloss'],['Karmel','#9b623c','gloss'],['Brąz','#664333','gloss'],['Grafit','#53565b','matte'],['Zieleń','#37684e','gloss'],['Błękit','#7096ad','gloss'],['Bordo','#743947','gloss'],['Czerń','#242325','gloss']
+],
+'Riwal':[['Biel standardowa','#eeeae0','gloss'],['Szary standardowy','#858b8c','satin'],['Czerń standardowa','#292b2d','gloss']]
+};
+const GLAZE_FALLBACK_48=[['Biel (standard)','#ece8dd','gloss'],['Krem (standard)','#e1cfaf','gloss'],['Grafit (standard)','#52565b','matte'],['Zieleń (standard)','#3e6856','gloss'],['Kobalt (standard)','#35547f','gloss'],['Brąz (standard)','#79503b','gloss']];
+function tileMaker47(id){if(id.startsWith('dacer'))return 'DACER';if(id.startsWith('kornak'))return 'Ceramika Kornak';if(id.startsWith('kafelkar')||id.startsWith('ceramicwall'))return 'Kafel-Kar';if(id.startsWith('riwal'))return 'Riwal';return 'all'}
+function currentMaker48(){const id=$('manufacturerTile').value;return tileMaker47(id)==='all'?$('tileMaker47').value:tileMaker47(id)}
+function updateTileMaker47(){
+ const select=$('manufacturerTile'),maker=$('tileMaker47').value;
+ for(const o of select.options){if(o.value==='demo')continue;o.hidden=maker!=='all'&&tileMaker47(o.value)!==maker;}
+ if(select.selectedOptions[0]?.hidden){select.value='demo';state.catalogId='demo';}
+ renderGlazes47();
+}
+function renderGlazes47(){
+ const host=$('tileGlazes47');host.replaceChildren();
+ const maker=currentMaker48(),arr=GLAZES_48[maker]||GLAZE_FALLBACK_48;
+ const named=maker==='Kafel-Kar'||maker==='Ceramika Kornak';
+ const note=$('tileGlazeNote47');
+ note.textContent=maker==='DACER'?'DACER: 31 szkliw deklarowanych przez producenta, ale brak pełnej zweryfikowanej listy nazw — poniżej 12 orientacyjnych barw STANDARDOWYCH (nie są oficjalną paletą DACER).':maker==='Riwal'?'Brak zweryfikowanego wzornika dla wybranych pozycji. Kolory STANDARDOWE, nieoficjalne.':named?'Nazwy szkliw według producenta; odcienie RGB są przybliżone, nie stanowią cyfrowego pomiaru próbek.':'Paleta STANDARDOWA — brak przypisania do producenta.';
+ for(const [name,hex,gloss] of arr){
+ const b=document.createElement('button');b.type='button';b.className='palette-choice';b.title=name+' — orientacyjny kolor ekranowy';
+ const sw=document.createElement('i');sw.style.background='linear-gradient(120deg,'+hex+',#ffffff33 45%,'+hex+')';
+ const t=document.createElement('span');t.textContent=name;b.append(sw,t);
+ b.addEventListener('click',()=>{state.color='custom';state.customColor=hex;state.surfaceGloss=gloss;sync();save();});
+ host.append(b);
+ }
+}
+$('tileMaker47').addEventListener('change',()=>{updateTileMaker47();save()});
+// Katalog CeramicWall 2026 — lista formatów i elementów z dokumentacji producenta.
+for(const [id,item] of Object.entries(MANUFACTURER_TILES)){
+ if(!id.startsWith('ceramicwall-'))continue;
+ const opt=document.createElement('option');opt.value=id;opt.textContent='CeramicWall · '+item.flat;
+ $('manufacturerTile').append(opt);
+}
+renderGlazes47();updateTileMaker47();
+$('manufacturerTile').addEventListener('change',e=>{const id=e.target.value,item=MANUFACTURER_TILES[id];state.catalogId=item?id:'demo';if(item){state.material='tile';state.cladding.tileW=item.w;state.cladding.tileH=item.h;state.cladding.corners=item.verifiedCorner;state.cladding.cornerLeg=item.legX;state.cladding.cornerSideLeg=item.legZ;}sync();renderGlazes47();save();notify(item?'Wczytano format '+item.flat+'. '+(item.verifiedCorner?'Kształtka narożna katalogowa.':'Brak potwierdzonych narożników. Płytki dekoracyjne Riwal mają uproszczoną płaską bryłę, bez reliefu.'):'Włączono format demonstracyjny.')});
 $('surfaceGloss').addEventListener('change',e=>{state.surfaceGloss=e.target.value;sync();save();});
 $('tilePhoto').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>5_000_000||!['image/jpeg','image/png','image/webp'].includes(file.type))throw Error('Wybierz zdjęcie JPG/PNG/WebP do 5 MB.');const url=URL.createObjectURL(file),im=new Image();try{im.src=url;await im.decode();const scale=Math.min(1,320/Math.max(im.naturalWidth,im.naturalHeight)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(im.naturalWidth*scale));c.height=Math.max(1,Math.round(im.naturalHeight*scale));c.getContext('2d').drawImage(im,0,0,c.width,c.height);const data=c.toDataURL('image/jpeg',.70);if(data.length>240000)throw Error('Przetworzone zdjęcie zbyt duże.');state.tilePhotoData=data;sync();save();notify('Dodano własną teksturę kafla.');}finally{URL.revokeObjectURL(url)}}catch(err){notify('Nie udało się wczytać zdjęcia: '+String(err.message||err))}e.target.value=''});
 $('clearTilePhoto').onclick=()=>{state.tilePhotoData=null;sync();save();notify('Usunięto teksturę kafla.')};
