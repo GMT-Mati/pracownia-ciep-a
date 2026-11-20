@@ -1577,7 +1577,7 @@ function renderTechnicalPreview(){
  const box=$('technicalPreview'),r=report511(docAudience511),technical=docAudience511==='wykonawca';
  for(const id of ['klient','wykonawca']){const b=$('doc-'+id);b.setAttribute('aria-pressed',String(docAudience511===id));}
  $('downloadTechSvg').hidden=!technical;
- $('docSummary511').textContent=(technical?'Projekt dla wykonawcy':'Prezentacja dla klienta')+' · '+r.pages.length+' plansz A4';
+ $('docSummary511').textContent=(technical?'Projekt dla wykonawcy':'Prezentacja dla klienta')+' · '+r.pages.length+' × A4';
  $('docCaption511').textContent=r.model.stock?'Trzy studyjne rendery bryły CeramicWall SET.':'Trzy ujęcia aktualnej bryły CAD z wybranym wykończeniem.';
  const gallery=$('photoGallery511');gallery.innerHTML='';
  for(const [key,label] of [['prawy','Przód i prawy bok'],['front','Na wprost'],['lewy','Przód i lewy bok']]){
