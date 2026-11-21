@@ -759,6 +759,26 @@ for(const [direction,glass] of [['L','corner'],['R','corner-right']]){
   });
  }
 }
+
+// KAVXO 5.14 — uzupełniony katalog parametrów producentów oraz BATI 1.
+FIREBOX_CATALOG.Kratki.push(
+ {id:'kratki-norra-9-9',label:'NORRA · 9,9 kW · 675 × 551 × 1272 mm',glass:'corner',bodyW:675,bodyD:551,bodyH:1272,heightIncludesFeet:true,flue:200,powerKw:9.9,powerRange:'7–13 kW',efficiency:86,weightKg:250,grille:'min. 700 / 500 cm²',verified:'manufacturer-card',source:'https://kratki.com/pl/',note:'Kratki NORRA: gabaryt 675 × 551 × 1272 mm, moc nominalna 9,9 kW, zakres 7–13 kW, sprawność 86%, króciec spalin Ø200 mm, masa 250 kg. Wymagane pola kratek wentylacyjnych: min. 700 / 500 cm². Wymiary drzwiczek, dolot, długość polan i odległości montażowe wymagają potwierdzenia kartą konkretnej wersji.'},
+ {id:'kratki-nbc-600-400',label:'NBC 600/400 · 9 kW · parametry karty producenta',glass:'front',flue:200,powerKw:9,powerRange:'4–11 kW',efficiency:84,logLength:30,grille:'min. 500 / 700 cm²',verified:'manufacturer-card',source:'https://kratki.com/pl/',note:'Kratki NBC 600/400: moc nominalna 9 kW, zakres 4–11 kW, sprawność 84%, króciec spalin Ø200 mm, maks. polano 30 cm, PM 22 mg/m³, CO 1116 mg/m³, wymagane kratki min. 500 / 700 cm². Gabaryty korpusu, dolot i wymiary drzwiczek — DO UZUPEŁNIENIA RĘCZNIE dla wybranego wariantu.'}
+);
+FIREBOX_CATALOG.Romotop.push(
+ {id:'romotop-heat-l-2g-s-70-44-33-13',label:'HEAT L 2G S 70.44.33.13 · lewy narożny',glass:'corner',bodyW:700,bodyD:370,bodyH:983,heightIncludesFeet:true,flue:150,air:150,powerKw:7.2,powerRange:'3,5–10 kW',efficiency:86,weightKg:130,draftPa:12,verified:'manufacturer-card',source:'https://www.romotop.pl/userfiles/dokumenty/14/nowy_katalog_wklady_kominkowe_romotop.pdf',note:'Romotop HEAT L 2G S 70.44.33.13: H×W×G 983 × 700 × 370 mm, moc nominalna 7,2 kW, zakres 3,5–10 kW, sprawność 86%, ciąg 12 Pa, masa 130 kg, dolot Ø150 mm i wylot Ø150 mm. Wymiary drzwiczek, długość polan i odległości montażowe — DO UZUPEŁNIENIA RĘCZNIE.'},
+ {id:'romotop-heat-r-2g-s-70-44-33-23',label:'HEAT R 2G S 70.44.33.23 · prawy narożny',glass:'corner-right',bodyW:700,bodyD:370,bodyH:983,heightIncludesFeet:true,flue:150,air:150,powerKw:7.2,powerRange:'3,5–10 kW',efficiency:86,weightKg:130,draftPa:12,verified:'manufacturer-card',source:'https://www.romotop.pl/userfiles/dokumenty/14/nowy_katalog_wklady_kominkowe_romotop.pdf',note:'Romotop HEAT R 2G S 70.44.33.23: H×W×G 983 × 700 × 370 mm, moc nominalna 7,2 kW, zakres 3,5–10 kW, sprawność 86%, ciąg 12 Pa, masa 130 kg, dolot Ø150 mm i wylot Ø150 mm. Wymiary drzwiczek, długość polan i odległości montażowe — DO UZUPEŁNIENIA RĘCZNIE.'}
+);
+FIREBOX_CATALOG.Hajduk.push(
+ {id:'hajduk-prisma-w',label:'PRISMA W · wodny · drzwi 752 × 510 mm',glass:'front',w:752,h:510,flue:200,air:150,powerKw:13,powerRange:'7–25 kW',efficiency:71,logLength:50,weightKg:240,verified:'manufacturer-card',source:'https://hajduk.eu/uploads/cenniki/Cennik%20LUX%20PL_06_2026.pdf',note:'Hajduk PRISMA W: drzwi 752 × 510 mm, moc nominalna 13 kW, zakres 7–25 kW, średnia sprawność 71%, króciec spalin Ø200 mm, dolot Ø150 mm, polano do 50 cm, masa 240 kg. Parametry płaszcza wodnego, gabaryt korpusu i wymagane zabezpieczenia — DO UZUPEŁNIENIA RĘCZNIE z instrukcji konkretnej wersji.'},
+ {id:'hajduk-volcano-wth-12',label:'VOLCANO WTh-12 · wodny · drzwi 670 × 510 mm',glass:'front',w:670,h:510,flue:200,air:150,powerKw:12,powerRange:'6–18 kW',efficiency:82,logLength:50,weightKg:360,verified:'manufacturer-card',source:'https://hajduk.eu/uploads/cenniki/Cennik%20LUX%20PL_06_2026.pdf',note:'Hajduk VOLCANO WTh-12: drzwi 670 × 510 mm, moc nominalna 12 kW, zakres 6–18 kW, sprawność 82%, króciec spalin Ø200 mm, dolot Ø150 mm, polano do 50 cm, masa 360 kg. Maksymalne ciśnienie układu 2,5 bar. Gabaryt, parametry wodne i odległości montażowe — DO UZUPEŁNIENIA RĘCZNIE z instrukcji konkretnej wersji.'}
+);
+FIREBOX_CATALOG['Piotr Batura'].push({
+ id:'bati-1',label:'BATI 1 · front · rysunek techniczny 620 × 630 mm',glass:'front',
+ w:480,h:390,glassW:280,glassH:390,bodyW:620,bodyD:630,bodyH:810,feet:370,totalD:835,trimW:600,trimD:650,doorProjection:120,frontRecess:80,lowerWidth:560,
+ verified:'user-drawing',source:'Rysunek techniczny BATI 1 — Piotr Batura (przekazany przez użytkownika)',
+ note:'BATI 1 — wymiary odczytane z przekazanego rysunku: korpus 620 × 630 × 810 mm, nóżki 370 mm, głębokość całkowita z występem 835 mm, górna nakładka 600 × 650 mm, otwór/ramka frontowa 480 × 390 mm, widoczne szkło 280 × 390 mm, występ drzwiczek 120 mm, cofnięcie 80 mm, dolna szerokość 560 mm. Moc, sprawność, masa, króciec spalin, dolot, długość polan, emisje, wymagany ciąg, izolacje i odległości montażowe — DO UZUPEŁNIENIA RĘCZNIE.'
+});
 function selectedFirebox(){const fb=state.firebox||{};return (FIREBOX_CATALOG[fb.maker]||[]).find(m=>m.id===fb.model)||null;}
 function renderFireboxCard(){
  const m=selectedFirebox(),el=$('fireboxTechCard');if(!el)return;
@@ -771,6 +791,26 @@ function renderFireboxCard(){
  for(const [url,label] of [[m.source,'Strona producenta'],[m.documentation,'Karta produktu PDF'],[m.drawing,'Rysunek techniczny']])if(url){const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=label+' ↗';link.style.display='inline-block';link.style.margin='4px 10px 4px 0';el.append(link)}
  if(m.bodyW&&m.bodyH&&m.bodyD){const dims=document.createElement('p');dims.className='fine';dims.textContent=(m.heightIncludesFeet?'Zweryfikowany gabaryt CAŁKOWITY katalogowy':'Dane korpusu z wcześniejszego projektu')+': '+m.bodyW+' × '+m.bodyD+' × '+m.bodyH+' mm. '+(m.heightIncludesFeet?'Nóżek nie dolicza się ponownie; brak weryfikacji montażowej.':'Sprawdź wariant i wysokość nóżek.');el.append(dims)}
  if(Number.isFinite(m.powerKw)){const k=document.createElement('p');k.className='fine';k.textContent='Moc nominalna: '+m.powerKw+' kW; wylot spalin: Ø'+m.flue+' mm. '+(Number.isFinite(m.w)&&Number.isFinite(m.h)?'Drzwiczki: '+m.w+' × '+m.h+' mm.':'Wymiary drzwiczek: niepotwierdzone, nie przenosimy ich do wizualizacji. ')+(m.bodyW?'Korpus oparty na danych gabarytowych producenta.':'Korpus: dane niepotwierdzone.');el.append(k)}
+ const params=[];
+ if(m.powerRange)params.push('zakres '+m.powerRange);
+ if(Number.isFinite(m.efficiency))params.push('sprawność '+m.efficiency+'%');
+ if(Number.isFinite(m.air))params.push('dolot Ø'+m.air+' mm');
+ if(Number.isFinite(m.weightKg))params.push('masa '+m.weightKg+' kg');
+ if(Number.isFinite(m.logLength))params.push('polano do '+m.logLength+' cm');
+ if(Number.isFinite(m.draftPa))params.push('ciąg '+m.draftPa+' Pa');
+ if(m.grille)params.push('kratki '+m.grille);
+ if(params.length){const p=document.createElement('p');p.className='fine';p.textContent='Parametry karty: '+params.join(' · ')+'.';el.append(p)}
+ const missing=[];
+ if(!Number.isFinite(m.powerKw))missing.push('moc nominalna');
+ if(!m.powerRange)missing.push('zakres mocy');
+ if(!Number.isFinite(m.efficiency))missing.push('sprawność');
+ if(!Number.isFinite(m.flue))missing.push('średnica króćca spalin');
+ if(!Number.isFinite(m.air))missing.push('dolot powietrza');
+ if(!Number.isFinite(m.weightKg))missing.push('masa');
+ if(!Number.isFinite(m.logLength))missing.push('długość polan');
+ if(!m.bodyW||!m.bodyD||!m.bodyH)missing.push('gabaryt korpusu');
+ if(m.missing)missing.push(...m.missing);
+ if(missing.length){const p=document.createElement('p');p.className='fine';p.style.color='#f2b28b';p.textContent='DO UZUPEŁNIENIA RĘCZNIE: '+[...new Set(missing)].join(', ')+'.';el.append(p)}
  const a=document.createElement('a');a.href=m.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Otwórz źródło producenta ↗';a.style.color='#eab98b';el.append(a);
  if(m.documentation){
   const doc=document.createElement('a');
@@ -1151,7 +1191,7 @@ $('exportElevation53').addEventListener('click',()=>{
 });
 $('fireboxMaker').addEventListener('change',e=>{state.firebox={maker:e.target.value,model:'manual',sideMm:state.firebox?.sideMm||420,filter:state.firebox?.filter||'all'};syncFireboxInputs();save();$('fireboxStatus').textContent='Wybierz model z listy lub wpisz wymiary ręcznie. Brak modelu na liście oznacza, że jego geometrii jeszcze nie zweryfikowano.';});
 $('fireboxFilter47').addEventListener('change',e=>{state.firebox={...(state.firebox||{}),filter:e.target.value,model:'manual'};syncFireboxInputs();save();});
-$('fireboxModel').addEventListener('change',e=>{const fb=state.firebox||{},m=(FIREBOX_CATALOG[fb.maker]||[]).find(x=>x.id===e.target.value);fb.model=e.target.value;state.firebox=fb;if(m){if(m.bodyW&&m.bodyD&&m.bodyH){state.body46={...body46(),w:m.bodyW,d:m.bodyD,h:m.bodyH,feet:m.heightIncludesFeet?0:80,flue:m.flue||180,air:m.air||125,visible:true};syncBody46();}if(Number.isFinite(m.w))$('fbW').value=m.w;if(Number.isFinite(m.h))$('fbH').value=m.h;if(Number.isFinite(m.side))$('fbSide').value=m.side;$('fireboxStatus').textContent=m.note;if(m.glass){state.glass=m.glass;if(state.opening){state.opening.x=m.glass==='corner-right'?Math.max(0,state.width-state.opening.w):m.glass==='corner'?0:(state.width-state.opening.w)/2;}document.querySelectorAll('[data-glass]').forEach(b=>b.classList.toggle('active',b.dataset.glass===m.glass));}sync();if(Number.isFinite(m.w))$('fbW').value=m.w;if(Number.isFinite(m.h))$('fbH').value=m.h;if(Number.isFinite(m.side))$('fbSide').value=m.side;}else $('fireboxStatus').textContent='Wymiary własne — wprowadź i zatwierdź.';save();});
+$('fireboxModel').addEventListener('change',e=>{const fb=state.firebox||{},m=(FIREBOX_CATALOG[fb.maker]||[]).find(x=>x.id===e.target.value);fb.model=e.target.value;state.firebox=fb;if(m){if(m.bodyW&&m.bodyD&&m.bodyH){state.body46={...body46(),w:m.bodyW,d:m.bodyD,h:m.bodyH,feet:m.heightIncludesFeet?0:(m.feet||80),flue:m.flue||180,air:m.air||125,visible:true};syncBody46();}if(Number.isFinite(m.w))$('fbW').value=m.w;if(Number.isFinite(m.h))$('fbH').value=m.h;if(Number.isFinite(m.side))$('fbSide').value=m.side;$('fireboxStatus').textContent=m.note;if(m.glass){state.glass=m.glass;if(state.opening){state.opening.x=m.glass==='corner-right'?Math.max(0,state.width-state.opening.w):m.glass==='corner'?0:(state.width-state.opening.w)/2;}document.querySelectorAll('[data-glass]').forEach(b=>b.classList.toggle('active',b.dataset.glass===m.glass));}sync();if(Number.isFinite(m.w))$('fbW').value=m.w;if(Number.isFinite(m.h))$('fbH').value=m.h;if(Number.isFinite(m.side))$('fbSide').value=m.side;}else $('fireboxStatus').textContent='Wymiary własne — wprowadź i zatwierdź.';save();syncFireboxDocData514();renderTechnicalPreview();});
 $('applyFirebox').addEventListener('click',()=>{try{const w=Number($('fbW').value),h=Number($('fbH').value),y=Number($('fbY').value),side=Number($('fbSide').value);if(!Number.isFinite(side)||side<100||side>1500||side>state.depth*10-20)throw Error('Boczna szyba musi mieć od 100 mm do głębokości obudowy pomniejszonej o 20 mm.');setFireboxOpening(w,h,y);state.firebox={maker:$('fireboxMaker').value,model:$('fireboxModel').value,sideMm:side,filter:$('fireboxFilter47').value};sync();save();renderFireboxCard();$('fireboxStatus').textContent='Zastosowano przeszklenie '+w+' × '+h+' mm; boczna szyba '+side+' mm. Zweryfikuj zgodność z konkretnym wkładem.';}catch(err){$('fireboxStatus').textContent=err.message;}});
 $('applyCatalogDoor51').addEventListener('click',()=>{
  try{
@@ -1313,8 +1353,8 @@ $('exportCatalog50').addEventListener('click',()=>catalogCsv50('kavxo-kafle-kata
  ['ID','Producent','Kafel','Szerokość mm','Wysokość mm','Grubość mm','Narożnik potwierdzony','Relief symulowany','Źródło'],
  Object.entries(MANUFACTURER_TILES).map(([id,t])=>[id,t.producer,t.flat,Math.round(t.w*10),Math.round(t.h*10),t.depthMm||'',t.verifiedCorner?'TAK':'NIE',t.profile||'brak',t.url||''])));
 $('exportFirebox50').addEventListener('click',()=>catalogCsv50('kavxo-wklady-katalog.csv',
- ['Producent','Model','Typ','Drzwi szerokość mm','Drzwi wysokość mm','Korpus szerokość mm','Korpus głębokość mm','Korpus wysokość mm','Weryfikacja','Źródło','Uwagi'],
- Object.entries(FIREBOX_CATALOG).flatMap(([maker,models])=>models.map(m=>[maker,m.label,m.glass,m.w||'',m.h||'',m.bodyW||'',m.bodyD||'',m.bodyH||'',m.verified||'niepotwierdzone',m.source||'',m.note||'']))));
+ ['Producent','Model','Typ','Drzwi szerokość mm','Drzwi wysokość mm','Szkło front mm','Szkło bok mm','Korpus szerokość mm','Korpus głębokość mm','Korpus wysokość mm','Moc nominalna kW','Zakres mocy','Sprawność %','Króciec spalin mm','Dolot mm','Masa kg','Polano cm','Weryfikacja','Źródło','Uwagi'],
+ Object.entries(FIREBOX_CATALOG).flatMap(([maker,models])=>models.map(m=>[maker,m.label,m.glass,m.w||'',m.h||'',m.glassW||'',m.side||'',m.bodyW||'',m.bodyD||'',m.bodyH||'',m.powerKw||'',m.powerRange||'',m.efficiency||'',m.flue||'',m.air||'',m.weightKg||'',m.logLength||'',m.verified||'niepotwierdzone',m.source||'',m.note||'']))));
 $('surfaceGloss').addEventListener('change',e=>{state.surfaceGloss=e.target.value;sync();save();});
 $('tilePhoto').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>5_000_000||!['image/jpeg','image/png','image/webp'].includes(file.type))throw Error('Wybierz zdjęcie JPG/PNG/WebP do 5 MB.');const url=URL.createObjectURL(file),im=new Image();try{im.src=url;await im.decode();const scale=Math.min(1,320/Math.max(im.naturalWidth,im.naturalHeight)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(im.naturalWidth*scale));c.height=Math.max(1,Math.round(im.naturalHeight*scale));c.getContext('2d').drawImage(im,0,0,c.width,c.height);const data=c.toDataURL('image/jpeg',.70);if(data.length>240000)throw Error('Przetworzone zdjęcie zbyt duże.');state.tilePhotoData=data;sync();save();notify('Dodano własną teksturę kafla.');}finally{URL.revokeObjectURL(url)}}catch(err){notify('Nie udało się wczytać zdjęcia: '+String(err.message||err))}e.target.value=''});
 $('clearTilePhoto').onclick=()=>{state.tilePhotoData=null;sync();save();notify('Usunięto teksturę kafla.')};
@@ -1577,25 +1617,59 @@ let docData512={};
 try{docData512=JSON.parse(localStorage.getItem('kavxo-doc-data-513')||localStorage.getItem('kavxo-doc-data-512')||'{}')||{};}catch(_){}
 if(!docData512||typeof docData512!=='object'||Array.isArray(docData512))docData512={};
 docData512.confirmed=docData512.confirmed&&typeof docData512.confirmed==='object'?docData512.confirmed:{};
+docData512.auto=docData512.auto&&typeof docData512.auto==='object'?docData512.auto:{};
+docData512.manual=docData512.manual&&typeof docData512.manual==='object'?docData512.manual:{};
+docData512.fireboxId=typeof docData512.fireboxId==='string'?docData512.fireboxId:'';
 function persistDocData512(){try{localStorage.setItem('kavxo-doc-data-513',JSON.stringify(docData512));}catch(_){}}
 function setDocData512(value,refresh=true){
  const raw=value&&typeof value==='object'&&!Array.isArray(value)?value:{};
- docData512={confirmed:raw.confirmed&&typeof raw.confirmed==='object'?{...raw.confirmed}:{}};
- for(const field of DOC_FIELDS512)docData512[field.key]=typeof raw[field.key]==='string'?raw[field.key]:'';
+ docData512={confirmed:raw.confirmed&&typeof raw.confirmed==='object'?{...raw.confirmed}:{},auto:raw.auto&&typeof raw.auto==='object'?{...raw.auto}:{},manual:raw.manual&&typeof raw.manual==='object'?{...raw.manual}:{},fireboxId:typeof raw.fireboxId==='string'?raw.fireboxId:''};
+ for(const field of DOC_FIELDS512){docData512[field.key]=typeof raw[field.key]==='string'?raw[field.key]:'';if(!Object.prototype.hasOwnProperty.call(docData512.manual,field.key)&&docData512[field.key].trim())docData512.manual[field.key]=true;}
  persistDocData512();
  for(const field of DOC_FIELDS512){const input=document.getElementById('doc-data-'+field.key),check=document.getElementById('doc-confirm-'+field.key);if(input)input.value=docData512[field.key];if(check)check.checked=docData512.confirmed[field.key]===true;}
  if(refresh&&document.querySelector('[data-tab="documentation"].active'))renderTechnicalPreview();
+}
+function fireboxDocText514(m){
+ const missing='DO UZUPEŁNIENIA RĘCZNIE';
+ const dimensions=m&&m.bodyW&&m.bodyD&&m.bodyH?m.bodyW+' × '+m.bodyD+' × '+m.bodyH+' mm':missing;
+ const heat=m&&Number.isFinite(m.powerKw)?'Moc nominalna: '+m.powerKw+' kW'+(m.powerRange?' · zakres '+m.powerRange:'')+(Number.isFinite(m.efficiency)?' · sprawność '+m.efficiency+'%':''):(missing+' — moc nominalna, zakres i sprawność');
+ const flue=m&&Number.isFinite(m.flue)?'Króciec spalin Ø'+m.flue+' mm':'Króciec spalin: '+missing;
+ const air=m&&Number.isFinite(m.air)?'Dolot powietrza Ø'+m.air+' mm':'Dolot powietrza: '+missing;
+ const mass=m&&Number.isFinite(m.weightKg)?'Masa paleniska '+m.weightKg+' kg':'Masa paleniska: '+missing;
+ const fuel=m&&Number.isFinite(m.logLength)?'Drewno; maks. długość polana '+m.logLength+' cm':'Drewno i wilgotność: '+missing;
+ const load=m&&Number.isFinite(m.logLength)?'Maks. długość polana '+m.logLength+' cm; wsad i rytm palenia: '+missing:'Wsad i rytm palenia: '+missing;
+ const source=m&&m.source?'Źródło: '+m.source:'';
+ return {firebox:m?m.label:'Własne / ręczne',ratedHeat:heat+(source?' · '+source:''),chimney:'Przekrój i wysokość komina: '+missing,air,buildUp:'Gabaryt korpusu: '+dimensions+'. Warstwy obudowy i izolacja: '+missing,fluePath:flue+'; przebieg przyłącza i rewizja: '+missing,joints:'Dylatacje i szczeliny: '+missing,cleanout:'Otwory rewizyjne i dostęp do czyszczenia: '+missing,baseAndMass:mass+'; nośność podłoża: '+missing,clearance:'Odległości od materiałów palnych i zabezpieczenia: '+missing,floorProtect:'Ochrona podłogi: '+missing,fuel,load,commissioning:'Pierwsze wygrzewanie i odbiór: '+missing,maintenance:'Czyszczenie, przeglądy i częstotliwość: '+missing};
+}
+function syncFireboxDocData514(){
+ const m=selectedFirebox(),id=m?(state.firebox.maker+'::'+m.id):'manual';
+ if(docData512.fireboxId===id&&!m)return;
+ const generated=fireboxDocText514(m);docData512.fireboxId=id;
+ for(const field of DOC_FIELDS512){const key=field.key;if(docData512.manual[key]===true)continue;docData512[key]=generated[key]||'';docData512.auto[key]=true;}
+ persistDocData512();
+ for(const field of DOC_FIELDS512){const input=document.getElementById('doc-data-'+field.key),check=document.getElementById('doc-confirm-'+field.key);if(input)input.value=String(docData512[field.key]||'');if(check)check.checked=docData512.confirmed[field.key]===true;}
+}
+function syncDocFireboxSelection514(){
+ const select=document.getElementById('docFireboxSelect514');if(!select)return;
+ const m=selectedFirebox(),current=m?(state.firebox.maker+'::'+m.id):'manual';
+ if([...select.options].some(o=>o.value===current))select.value=current;else select.value='manual';
 }
 function mountDocFields512(){
  if(document.getElementById('docDataPanel512'))return;
  const style=document.createElement('style');style.textContent='#docDataPanel512{margin:16px 0;padding:12px;border:1px solid #59635c;border-radius:10px;background:#202924}#docDataPanel512 summary{cursor:pointer;color:#f0d3b5;font-weight:650;padding:4px 2px 10px}#docDataPanel512 p{font-size:12px;line-height:1.5;color:#c0c6c0;margin:2px 0 12px}.doc-data-grid512{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.doc-data-grid512>label{display:grid;gap:6px;color:#e5ddd2;font-size:11px}.doc-data-grid512 input[type=text]{width:100%;min-width:0;border:1px solid #56615c;border-radius:6px;background:#111821;color:#fff;padding:9px;font:12px inherit}.doc-confirm-wrap513{display:flex;align-items:center;gap:7px;color:#b9c7bd;font-size:10px}.doc-confirm-wrap513 input{accent-color:#97c19e;width:16px;height:16px}@media(max-width:540px){.doc-data-grid512{grid-template-columns:1fr}}';
  document.head.append(style);
  const wrap=document.createElement('details');wrap.id='docDataPanel512';wrap.innerHTML='<summary>Dane techniczne projektu · zapisz przed eksportem</summary><p>Wpisy przypisują się do projektu w pliku KAVXO (.kavxo.json). Zaznacz „Potwierdzone” po sprawdzeniu wartości z pomiarem, kartą produktu albo projektem. Niezaznaczone lub puste pozycje będą tak oznaczone na planszach.</p><div class="doc-data-grid512"></div>';
+ const chooser=document.createElement('label');chooser.style.cssText='display:grid;gap:6px;margin:4px 0 12px;color:#e5ddd2;font-size:11px';chooser.textContent='Palenisko do automatycznego uzupełnienia dokumentacji';
+ const select=document.createElement('select');select.id='docFireboxSelect514';select.style.cssText='border:1px solid #56615c;border-radius:6px;background:#111821;color:#fff;padding:9px;font:12px inherit';
+ const own=document.createElement('option');own.value='manual';own.textContent='Własne / ręczne';select.append(own);
+ for(const [maker,models] of Object.entries(FIREBOX_CATALOG)){const group=document.createElement('optgroup');group.label=maker;for(const model of models){const option=document.createElement('option');option.value=maker+'::'+model.id;option.textContent=model.label;group.append(option)}select.append(group)}
+ select.addEventListener('change',()=>{const value=select.value;if(value==='manual'){state.firebox={maker:'manual',model:'manual',sideMm:state.firebox?.sideMm||420,filter:'all'};sync();save();syncFireboxDocData514();renderTechnicalPreview();return;}const [maker,id]=value.split('::');state.firebox={...(state.firebox||{}),maker,model:id,filter:'all'};$('fireboxMaker').value=maker;syncFireboxInputs();$('fireboxModel').value=id;$('fireboxModel').dispatchEvent(new Event('change'));syncFireboxDocData514();renderTechnicalPreview();});
+ chooser.append(select);wrap.querySelector('p').after(chooser);
  const grid=wrap.querySelector('.doc-data-grid512');
  for(const field of DOC_FIELDS512){
   const label=document.createElement('label');label.append(document.createTextNode(field.label));
   const input=document.createElement('input');input.type='text';input.id='doc-data-'+field.key;input.placeholder=field.placeholder;input.value=String(docData512[field.key]||'');
-  input.addEventListener('input',()=>{docData512[field.key]=input.value;docData512.confirmed[field.key]=false;const check=document.getElementById('doc-confirm-'+field.key);if(check)check.checked=false;persistDocData512();requestAnimationFrame(renderTechnicalPreview);});
+  input.addEventListener('input',()=>{docData512[field.key]=input.value;docData512.manual[field.key]=true;docData512.auto[field.key]=false;docData512.confirmed[field.key]=false;const check=document.getElementById('doc-confirm-'+field.key);if(check)check.checked=false;persistDocData512();requestAnimationFrame(renderTechnicalPreview);});
   const confirmWrap=document.createElement('div');confirmWrap.className='doc-confirm-wrap513';
   const check=document.createElement('input');check.type='checkbox';check.id='doc-confirm-'+field.key;check.checked=docData512.confirmed[field.key]===true;check.setAttribute('aria-label','Potwierdzono: '+field.label);
   check.addEventListener('change',()=>{if(check.checked&&!input.value.trim()){check.checked=false;return;}docData512.confirmed[field.key]=check.checked;persistDocData512();requestAnimationFrame(renderTechnicalPreview);});
@@ -1661,6 +1735,8 @@ function publish511(mode,report,base=location.href.split('#')[0]){
 let docAudience511=location.hash==='#wykonawca'?'wykonawca':'klient';
 function renderTechnicalPreview(){
  mountDocFields512();
+ syncDocFireboxSelection514();
+ syncFireboxDocData514();
  const box=$('technicalPreview'),r=report511(docAudience511),technical=docAudience511==='wykonawca';
  for(const id of ['klient','wykonawca']){const b=$('doc-'+id);b.setAttribute('aria-pressed',String(docAudience511===id));}
  $('downloadTechSvg').hidden=!technical;
