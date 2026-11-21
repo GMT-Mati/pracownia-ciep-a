@@ -776,7 +776,7 @@ FIREBOX_CATALOG.Hajduk.push(
 FIREBOX_CATALOG['Piotr Batura'].push({
  id:'bati-1',label:'BATI 1 · front · rysunek techniczny 620 × 630 mm',glass:'front',
  w:480,h:390,glassW:280,glassH:390,bodyW:620,bodyD:630,bodyH:810,feet:370,totalD:835,trimW:600,trimD:650,doorProjection:120,frontRecess:80,lowerWidth:560,
- verified:'user-drawing',source:'Rysunek techniczny BATI 1 — Piotr Batura (przekazany przez użytkownika)',
+ verified:'user-drawing',source:'Rysunek techniczny BATI 1 — Piotr Batura (przekazany przez użytkownika)',drawing:'assets/bati-1-rysunek.jpeg',
  note:'BATI 1 — wymiary odczytane z przekazanego rysunku: korpus 620 × 630 × 810 mm, nóżki 370 mm, głębokość całkowita z występem 835 mm, górna nakładka 600 × 650 mm, otwór/ramka frontowa 480 × 390 mm, widoczne szkło 280 × 390 mm, występ drzwiczek 120 mm, cofnięcie 80 mm, dolna szerokość 560 mm. Moc, sprawność, masa, króciec spalin, dolot, długość polan, emisje, wymagany ciąg, izolacje i odległości montażowe — DO UZUPEŁNIENIA RĘCZNIE.'
 });
 function selectedFirebox(){const fb=state.firebox||{};return (FIREBOX_CATALOG[fb.maker]||[]).find(m=>m.id===fb.model)||null;}
