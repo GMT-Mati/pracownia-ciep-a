@@ -1945,7 +1945,7 @@ function report511(mode,customPics){
    pages.push(frame511(model,mode,start+1,count,'Palenisko i komin',infoPage512(model,'KARTA URZĄDZENIA','Palenisko i komin',[
      DOC_FIELDS512.find(x=>x.key==='firebox'),DOC_FIELDS512.find(x=>x.key==='ratedHeat'),
      DOC_FIELDS512.find(x=>x.key==='chimney'),DOC_FIELDS512.find(x=>x.key==='air')
-   ],'Porównaj dane paleniska, przewodu kominowego i powietrza z instrukcjami producentów oraz pomiarami na miejscu. '+(geometryWarnings511().length?'OSTRZEŻENIE WYMIAROWE: '+geometryWarnings511().join(' '):'Nie wykryto konfliktu wymiarów; kontrola nie potwierdza montażu ani wymagań przeciwpożarowych.')));
+   ],'Porównaj dane paleniska, przewodu kominowego i powietrza z instrukcjami producentów oraz pomiarami na miejscu. '+(geometryWarnings511().length?'OSTRZEŻENIE WYMIAROWE: '+geometryWarnings511().join(' '):'Nie wykryto konfliktu wymiarów; kontrola nie potwierdza montażu ani wymagań przeciwpożarowych.'))));
    if(hasDrawing)pages.push(frame511(model,mode,start+2,count,'Rysunek techniczny paleniska',fireboxDrawingPage514(model,fb)));
    pages.push(frame511(model,mode,start+2+(hasDrawing?1:0),count,'Podłoże i odbiór',infoPage512(model,'KARTA MONTAŻOWA','Podłoże i odbiór',[
      DOC_FIELDS512.find(x=>x.key==='baseAndMass'),DOC_FIELDS512.find(x=>x.key==='clearance'),
